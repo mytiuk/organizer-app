@@ -1,0 +1,106 @@
+.newsBox {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 420px;
+  height: 100%;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+ top: 5px;
+  background: none;
+}
+
+.newsCont {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  left: 0;
+  height: 300px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.619);
+  border-radius: 10px;
+  /* filter: drop-shadow(0 0 2px #fff) drop-shadow(0 0 5px #fff) drop-shadow(0 0 15px #fff)
+  /* box-shadow: 0 0 35px #333; */
+ 
+
+}
+.newsCont h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #333;
+}
+
+/* .newsCont p {
+  color: #333;
+  font-size: 0.9rem;
+  font-weight: 500;
+} */
+.newsIcon {
+  position: relative;
+  left: 1%;
+  top: 1%;
+  width: 40px;
+  height: 40px
+}
+
+.newsImage {
+  margin-top: 2%;
+  width: 34%;
+  border-radius: 50%;
+  height: 47%; 
+   box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.461);
+}
+
+.wheather {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 420px;
+  border-radius: 10px;
+  height: 23%;
+  border: 1px solid rgba(255, 255, 255, 0.619);
+  top: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.086);
+}
+
+.wheather h4 {
+  position: absolute;
+  font-weight: 500;
+  top: 5px;
+  color: #333;
+}
+
+.wheather img {
+  position: absolute;
+  width: 17%;
+  left: 20px;
+  top: 10px;
+  filter: drop-shadow(0 0 2px #fff) drop-shadow(0 0 5px #fff) 
+  /* height: 20%; */
+}
+
+.wheather p {
+  font-size: 1.9rem;
+  color: #333;
+  position: absolute;
+  bottom: 22px;
+}
+
+.wheather .wind {
+  font-size: 1rem;
+  position: absolute;
+  bottom: 0;
+  left: 190px;
+}
+
+.wheather small {
+  color: #333;
+  font-size: 0.8rem;
+  font-weight: 300;
+  position: absolute;
+  bottom: 2px;
+  left: 202px
+}

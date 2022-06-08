@@ -1,0 +1,198 @@
+.box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calContainer {
+  position: relative;
+  width: 420px;
+  min-height: 420px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calendar {
+  background: none;
+  border: none;
+}
+
+.calendar .react-calendar__navigation__arrow  {
+  font-size: 1.1rem;
+  border-radius: 50%;
+  margin-right: 6px; 
+  margin-bottom: 27px; 
+  background: rgb(255, 255, 255);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3),
+  -5px -5px 20px #fff, 
+  inset -5px -5px 5px rgba(255, 255, 255, 0.5),
+  inset 5px 5px 5px rgba(0, 0, 0, 0.05);
+  height: 45px;
+  color: #222327;
+}
+
+.calendar .react-calendar__navigation__label__labelText {
+  font-size: 1.6rem;
+  color: #333;
+  text-shadow: 0 2px 5px #d8dade;
+}
+
+.calendar .react-calendar__navigation__label {
+ transform: translateY(-20px);
+} 
+
+.calendar .react-calendar__navigation .react-calendar__navigation__label:hover {
+ background: none;
+ border-radius: 5px;
+ filter: drop-shadow(0 0 2px #fff) drop-shadow(0 0 5px #fff) drop-shadow(0 0 15px #fff)
+} 
+
+.calendar .react-calendar__navigation .react-calendar__navigation__label:hover {
+ background: none;
+ border-radius: 5px;
+ filter: drop-shadow(0 0 2px #fff) drop-shadow(0 0 5px #fff) drop-shadow(0 0 15px #fff)
+} 
+
+.calendar .react-calendar__navigation__arrow.react-calendar__navigation__prev2-button {
+  transform: translateX(-15px);
+}
+
+.calendar .react-calendar__navigation__arrow.react-calendar__navigation__prev-button {
+  transform: translateX(-15px);
+}
+
+.calendar .react-calendar__navigation__arrow.react-calendar__navigation__next-button {
+  transform: translateX(15px);
+}
+
+.calendar .react-calendar__navigation__arrow.react-calendar__navigation__next2-button {
+  transform: translateX(15px);
+}
+
+.calendar .react-calendar__month-view__weekdays {
+  font-size: 0.9rem;
+  transform: translateX(-16px);
+}
+
+.calendar .react-calendar__month-view__weekdays .react-calendar__month-view__weekdays__weekday {
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(255, 255, 255);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3),
+  -5px -5px 20px #fff, 
+  inset -5px -5px 5px rgba(255, 255, 255, 0.5),
+  inset 5px 5px 5px rgba(0, 0, 0, 0.05);
+  color: #222327;
+  margin-right: 4.5px;
+  border-radius: 50%;
+  height: 52px;
+}
+
+.calendar .react-calendar__month-view__days {
+  margin-top: 20px;
+  width: 380px;
+  transform: translateX(-18px);
+}
+
+.calendar .react-calendar__month-view__days button {
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+ .calendar  .react-calendar__month-view__days__day {
+  color: #333;
+}
+
+.calendar   .react-calendar__month-view__days__day--weekend {
+  color: rgb(231, 83, 83);
+}
+
+.calendar   .react-calendar__month-view__days__day--neighboringMonth {
+  color: rgb(141, 139, 139);
+}
+
+.calendar   .react-calendar__tile--active.react-calendar__tile--range.react-calendar__tile--rangeBothEnds {
+  background: none;
+}
+
+.calendar .react-calendar__month-view__days button:hover {
+  background: none;
+ filter: drop-shadow(0 0 2px #fff) drop-shadow(0 0 5px #fff) drop-shadow(0 0 15px #fff)
+}
+
+.calendar .react-calendar__month-view__days .react-calendar__tile--now {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: #333;
+  background: none;
+  filter: drop-shadow(0 0 2px #fff) drop-shadow(0 0 5px #fff) drop-shadow(0 0 15px #fff)
+}
+
+.calendar .react-calendar__year-view__months button {
+  font-size: 1rem;
+  color: #333;
+}
+
+.calendar .react-calendar__year-view__months button:hover {
+  background: none;
+  filter: drop-shadow(0 0 2px #fff) drop-shadow(0 0 5px #fff) drop-shadow(0 0 15px #fff)
+}
+
+.calendar .react-calendar__tile.react-calendar__tile--now.react-calendar__tile--hasActive.react-calendar__tile--range {
+  background: none;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  filter: drop-shadow(0 0 2px #fff) drop-shadow(0 0 5px #fff) drop-shadow(0 0 15px #fff)
+}
+
+.calendar .react-calendar__decade-view__years button {
+  font-size: 1rem;
+  color: #333;
+}
+
+.calendar .react-calendar__decade-view__years button:hover {
+  background: none;
+  filter: drop-shadow(0 0 2px #fff) drop-shadow(0 0 5px #fff) drop-shadow(0 0 15px #fff)
+}
+
+.react-calendar__tile.react-calendar__tile--now.react-calendar__tile--hasActive.react-calendar__year-view__months__month {
+  background: none;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  filter: drop-shadow(0 0 2px #fff) drop-shadow(0 0 5px #fff) drop-shadow(0 0 15px #fff)
+}
+
+
+.calendar .react-calendar__tile--now.react-calendar__tile--hasActive.react-calendar__decade-view__years__year {
+  background: none;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  filter: drop-shadow(0 0 2px #fff) drop-shadow(0 0 5px #fff) drop-shadow(0 0 15px #fff)
+}
+
+.calendar .react-calendar__century-view__decades button {
+  font-size: 1rem;
+  color: #333;
+}
+
+.calendar .react-calendar__century-view__decades button:hover {
+  background: none;
+  filter: drop-shadow(0 0 2px #fff) drop-shadow(0 0 5px #fff) drop-shadow(0 0 15px #fff)
+}
+
+.calendar .react-calendar__tile--now.react-calendar__tile--hasActive.react-calendar__century-view__decades__decade {
+  background: none;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  filter: drop-shadow(0 0 2px #fff) drop-shadow(0 0 5px #fff) drop-shadow(0 0 15px #fff)
+}

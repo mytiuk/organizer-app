@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import {  Routes, Route } from 'react-router-dom'
+import './App.css'
+import { Navbar } from './UI/Navbar/Navbar'
+import { DragElement } from './HOC/DragElement/DragElement'
+import { ButtonCard } from './UI/ButtonCard/ButtonCard'
+import { Clock } from './UI/Clock/Clock'
+import { FirebaseState } from './HOC/FirebaseState/FirebaseState'
+import { Auth } from './component/Auth/Auth'
+import { Logout } from './component/Logout/Logout'
+import { Background } from './UI/Background/Background'
+import { Contact } from './component/Contact/Contact'
+import { Info } from './component/Info/Info'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       <FirebaseState>
+          <Background>
+              <Clock/>
+              <DragElement>
+                <Navbar/>
+              </DragElement>
+              <ButtonCard>
+                <Routes>
+                  <Route index path='/' element={<div>Hello</div>}/>
+                  <Route path='/auth' element={<Auth/>}/>
+                  <Route path='/logout' element={<Logout/>}/>
+                  <Route path='/contact' element={ <Contact/>}/>
+                  <Route path='/info' element={<Info/>}/>
+                </Routes>
+              </ButtonCard>
+          </Background>
+        </FirebaseState>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

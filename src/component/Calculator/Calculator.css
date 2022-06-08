@@ -1,0 +1,117 @@
+
+
+.calcContain {
+
+  position: relative;
+
+  width: 420px;
+  height: 420px;
+  border-radius: 10px;
+  padding: 10px 55px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.calcContain .value {
+  position: relative;
+  top: 10px;
+  height: 33px;
+  width: 280px;
+  border: 2px solid #fff;
+  outline: none;
+  background: #a2ab6d;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px 3px rgba(0, 0, 0, 0.2);
+  text-align: right;
+  font-size: 1rem;
+  left: 10px;
+  transition: 0.5s
+}
+
+.calcContain .value.active {
+  position: relative;
+  height: 53px;
+  width: 280px;
+  font-size: 2rem;
+  left: 10px;
+  transition: 0.5s
+}
+
+.calculator {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 288px;
+  height: 347px;
+  margin-top: 12px;
+  left: 10px;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+.calculator.active {
+ transition: 0.5s
+}
+
+.calculator span {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-size: 1rem;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3),
+    -5px -5px 20px #fff, 
+    inset -5px -5px 5px rgba(255, 255, 255, 0.5),
+    inset 5px 5px 5px rgba(0, 0, 0, 0.05);
+  background: #edf1f4;
+  transform: translateX(30px) translate(calc(55px * var(--x)), calc(55px * var(--y)));
+  color: #2f2f2f;
+  transition: transform 0.5s, width 0.5s, height 0.5s, background 0s;
+  transition-delay: calc(0.05s * var(--i));
+} 
+
+.calculator.active span {
+  border: 1px solid #fff;
+  color: rgba(51, 51, 51, 0.851);
+  font-size: 1.5rem;
+  width: 55px;
+  height: 55px;
+  background: rgb(255, 255, 255);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3),
+  -5px -5px 20px #fff, 
+  inset -5px -5px 5px rgba(255, 255, 255, 0.5),
+  inset 5px 5px 5px rgba(0, 0, 0, 0.05);
+  transform: translateX(30px) translate(calc(70px * var(--x)), calc(67px * var(--y)));
+  transition: 0.5s;
+  transition-delay: calc(0.05s * var(--i));
+}
+
+.calculator.active span:hover {
+  transition: 0s;
+  cursor: pointer;
+  filter: drop-shadow(0 0 2px #fff) 
+}
+
+.calculator .zero {
+  width: 98px;
+  height: 45px;
+  border-radius: 40px;
+  padding-right: 53px;
+  margin-right: 55px
+}
+
+.calculator.active .zero {
+  width: 128px;
+  height: 57px;
+  border-radius: 40px;
+  padding-right: 70px;
+  margin-right: 70px
+}

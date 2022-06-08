@@ -1,0 +1,96 @@
+.contact {
+display: flex;
+position: absolute;
+justify-content: center;
+align-items: center;
+min-width: 100vh;
+width: 800px;
+height: 500px;
+overflow: hidden;
+background: linear-gradient(to bottom, #ff4f8ad7, #f5f7f8d4);
+border-radius: 20px;
+box-shadow: 0 0 35px 15px #ff4f8a99;
+border: 1px solid rgba(255, 255, 255, 0.5);
+z-index: 11;
+animation: appear 0.5s; 
+}
+
+@keyframes appear {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.contact .color {
+  position: absolute;
+  filter: blur(120px);
+}
+
+.contact .color:nth-child(1) {
+  position: absolute;
+  background: #ff359b;
+  width: 100%;
+  height: 200px;
+  top: 0;
+}
+
+.contact .color:nth-child(2) {
+  position: absolute;
+  background: #fffd87;
+  width: 650px;
+  height: 250px;
+  bottom: 0;
+  right: 0;
+}
+
+.contact .color:nth-child(3) {
+  position: absolute;
+  background: #00d2ff;
+  width: 400px;
+  height: 200px;
+  bottom: 0;
+  right: 0;
+}
+
+.contact::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  z-index: 2;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.contact .contactImg {
+  display: flex;
+  position:relative;
+  top: 90px;
+}
+
+.contact .contactImg a {
+  display: flex;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 30px;
+  z-index: 1;
+  border-radius: 20px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+  transition: top 1s, z-index 0.5s, transform 1s;
+  transition-duration: 1s, 0.5s, 1s; 
+}
+
+.contact .contactImg a:hover {
+  transition-duration: 1s, 0.5s, 1s;
+  top: -8px;
+  transform: translateY(10px);
+  z-index: 10;
+}
+

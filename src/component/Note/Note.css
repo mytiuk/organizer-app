@@ -1,0 +1,180 @@
+
+.noteBox {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  bottom: 10px;
+  width: 420px;
+	height: 400px;
+  color: #333;
+  z-index: 0;
+}
+
+.noteBox input {
+  width: 330px;
+  height: 40px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  background: #fffefed6;
+  border: none;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.3);
+  outline: none;
+  font-weight: 500;
+  color: #333;
+  font-size: 1rem;
+  transform: translateX(10px);
+}
+
+.noteBox .selectIcon {
+  cursor: pointer;
+  outline: none;
+  width: 20px;
+  height: 20px;
+  margin-left: 9px;
+  padding-top: 3px;
+  border-radius: 50%;
+}
+
+.noteBox #check  {
+  color:#35f391;
+  font-size: 2.2rem;
+  padding-left: 15px;
+} 
+
+.noteBox .fa:hover {
+  cursor: pointer;
+} 
+
+.noteBox ul {
+  position: relative;
+  position: relative;
+  overflow-y: auto;
+  margin-top: 5px;
+  width: 420px;
+  height: 380px;
+  border-radius: 10px;
+  z-index: 9;
+  padding-bottom: 10px;
+}
+
+.noteBox ul .noteList {
+  justify-content: space-between;
+  position: relative;
+  display: flex;
+  list-style: none;
+  width: 400px;
+  height: 80px;
+  margin-top: 10px ;
+  padding-left: 5px;
+  padding-top: 20px;
+  background: rgba(255, 255, 255, 0.695);
+  border-radius: 10px;
+  transition: 0.5s;
+  z-index: 10;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2),
+  inset 5px 5px 5px rgba(0, 0, 0, 0.1), 
+  inset -5px -5px 5px rgba(255, 255, 255, 0.868);
+}
+
+.noteBox ul .noteList:hover { 
+  position: relative;
+  background: rgba(129, 126, 126, 0.404);
+  cursor: pointer;
+  transition: 0.5s;
+  color: #000;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  transform:scale(0.85);
+  z-index: 10;
+}
+
+.noteBox ul li i {
+  font-size: 1.8rem;
+  padding-left: 5px;
+}
+
+.noteBox ul li h4 {
+  padding-left: 20px;
+}
+
+.noteBox ul li  small{
+  padding-left: 20px;
+}
+
+.noteBox ul li ion-icon {
+  opacity: 0;
+  color: rgba(0, 0, 0, 0.278);
+}
+
+.noteBox ul li:hover ion-icon {
+  opacity: 1;
+  transition: 0.5s;
+  font-size: 2rem;
+  transform: translate(-10px, 5px);
+  color: #f44336;
+  overflow: hidden;
+}
+
+.noteBox .option .selectUl {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  font-size: 1.6rem;
+  overflow-y: auto;
+  margin-left: 25px;
+  margin-top: 20px;
+  cursor: pointer;
+  justify-content: center;
+  align-items:flex-start;
+  background: rgba(56, 55, 55, 0.784);
+  width: 370px;
+  height: 300px;
+  font-size: 2.5rem;
+  border-radius: 10px;
+  opacity: 0;
+  transition: 0.5s;
+  opacity: 0;
+  transform: scale(0);
+}
+
+::-webkit-scrollbar {
+  width: 5px; 
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.276);
+}
+
+.noteBox .option .selectUl.active {
+  transition: 0.5s;
+  opacity: 1;
+  z-index: 10;
+  box-shadow: 0 0 20px 15px rgba(0, 0, 0, 0.5);
+  transform: scale(1.2);
+}
+
+.noteBox .option .selectUl .selectList:hover {
+  transition: 0.3s;
+  transform: scale(1.3);
+  cursor: pointer;
+}
+
+.noteBox .option .selectList {
+  list-style: none;
+  flex:  0 130px;
+  text-align: center;
+  height: 50px;
+  width: 60px;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+.loaderNote {
+  display: flex;
+  color: #333;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  top: 90px;
+}

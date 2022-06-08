@@ -1,0 +1,57 @@
+:root {
+  --color: #fff
+}
+
+.loader {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+}
+
+.loader span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(calc(360deg / 15 * var(--i)));
+}
+
+.loader span::before {
+  content: '';
+  position: absolute;
+  right: -12px;
+  background: var(--color);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 4px var(--color),
+  0 0 8px var(--color),
+  0 0 16px var(--color),
+  0 0 24px var(--color),
+  0 0 48px var(--color),
+  0 0 96px var(--color);
+  animation: spin 2s linear infinite;
+  animation-delay: calc(0.1s * var(--i));
+}
+
+
+.loader:nth-child(2) span {
+  transform: rotate(180deg);
+}
+
+.loader:nth-child(2) span::before {
+  animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes spin {
+  0% {
+    transform: scale(0.1);
+   }
+  100% {
+    transform: scale(1);
+   }
+}
