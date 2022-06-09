@@ -14,11 +14,11 @@ export const  Navbar = () => {
   const [cardType, setCardType] = useState('card')
   const [index, setIndex] = useState(2)
   const [icon, setIcon] = useState([
-    {path: '/calendar',  name: "calendar-outline", type: 'list'},
-    {path: '/calculator',  name: "calculator-outline", type: 'list'},
-    {path: '/start',  name: "globe-outline", type: 'list active'},
-    {path: '/game',  name: "game-controller-outline", type: 'list'},
-    {path: '/note',  name: "reader-outline", type: 'list'},
+    {name: "calendar-outline", type: 'list'},
+    {name: "calculator-outline", type: 'list'},
+    {name: "globe-outline", type: 'list active'},
+    {name: "game-controller-outline", type: 'list'},
+    {name: "reader-outline", type: 'list'},
     ])
   const cards = [<CalendarComponent/>, <Calculator/>, <News/>, <Game/>, <Note/>]
 

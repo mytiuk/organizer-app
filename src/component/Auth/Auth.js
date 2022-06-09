@@ -9,14 +9,13 @@ export const Auth = () => {
   const [data, setData] = useState({})
   const [isDisabled, setIsDisabled] = useState(true)
   const [activeBoxe, setActiveBox] = useState(false)
-  const urlSingIn = 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyBNYF3lJivOZNqG8upM-gUo_bVjKmykeEU'
-  const urlSingUp = 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyBNYF3lJivOZNqG8upM-gUo_bVjKmykeEU'
+  const urlSingIn = 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyC-c7-4YTykoX3jnthfc3y8O2co1Bs4HOc'
+  const urlSingUp = 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyC-c7-4YTykoX3jnthfc3y8O2co1Bs4HOc'
 
   const email = useAuthValidation()
   const password = useAuthValidation()
   const {postHandler, error} = useContext(FirebaseContext)
 
-  console.log(error)
   const submitHandler = (e) => {
     e.preventDefault()
   }

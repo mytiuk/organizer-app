@@ -72,8 +72,7 @@ export const FirebaseState = ({children}) => {
             id: key,
             notes: response.data[key]
           } 
-
-           ///---------TIME OUT---------///
+          
            dispatch({type: GET_NOTE, payload})
          
         }) 

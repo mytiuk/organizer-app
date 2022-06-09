@@ -32,7 +32,7 @@ export const Note = () => {
     {icon: 'fa fa-bullseye', color: '#f44336'},
   ])
 
-  const url = 'https://organizer-2ab72-default-rtdb.europe-west1.firebasedatabase.app/'
+  const url = 'https://organizer-app-5859b-default-rtdb.europe-west1.firebasedatabase.app//'
   const {notes, loading, postHandler, getNote, removeNote, userId, userIdUpdater} = useContext(FirebaseContext)
  
   const postNote = () => {

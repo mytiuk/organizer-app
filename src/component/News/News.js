@@ -13,14 +13,16 @@ export const News = () => {
 
   const [articles, setArticles] = useState([])
   const [weatherData, setWeatherData] = useState([])
-  const url = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=4b91fcb3c8374b81a99f341976ef8520'
+  const url = 'https://gnews.io/api/v4/search?q=example&token=dd51be862d6b023493f0ec448f16db92'
   const url2 = 'https://api.openweathermap.org/data/2.5/weather?q=Warsaw,pl&appid=a19e1d0821bdad28dab5b0354e377642'
+  // const url3 = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=4b91fcb3c8374b81a99f341976ef8520'
 
+console.log(articles)
   const getNews = async() => {
     try {
       const response = await fetch(url)
       const data = await response.json()
-      setArticles(data.articles)
+      setArticles([...data.articles])
      } catch(e) {
       console.log(e)
       } 
@@ -60,7 +62,7 @@ export const News = () => {
          if(weatherData[2].description === 'clear sky') {
            return (<img src={icon.sunny} />)
          }
-         if(weatherData[2].description === 'broken clouds') {
+         if(weatherData[2].description === 'broken clouds' || 'light intensity shower rain') {
            return (<img src={icon.rainy} />)
          }
          if(weatherData[2].description === 'scattered clouds') {
@@ -101,17 +103,17 @@ export const News = () => {
         pagination={true}
         modules={[EffectCoverflow, Pagination]}
         >
-       {articles.map((article, index) => {
+       {articles.length !== 0 && articles.map((article, index) => {
           if(article.title.length < 100) {
             return (
               <SwiperSlide key={index} className='newsCont'>
                 <img src={news} className='newsIcon'/>
                 <h3>{article.title}</h3>
-                <img src={article.urlToImage} alt='news image' className='newsImage'/>
+                <img src={article.image} alt='news image' className='newsImage'/>
                 <p> <a href={article.url} target='_blank'>{article.source.name}</a></p>
               </SwiperSlide>
             )
-          }
+          } 
         })}
       </Swiper>
     </>

@@ -1,5 +1,5 @@
 import React from 'react'
-import {  Routes, Route } from 'react-router-dom'
+import {  Routes, Route, Navigate } from 'react-router-dom'
 import './App.css'
 import { Navbar } from './UI/Navbar/Navbar'
 import { DragElement } from './HOC/DragElement/DragElement'
@@ -28,6 +28,7 @@ function App() {
                   <Route path='/logout' element={<Logout/>}/>
                   <Route path='/contact' element={ <Contact/>}/>
                   <Route path='/info' element={<Info/>}/>
+                  <Route path="*" element={<Navigate to="/" />} />
                 </Routes>
               </ButtonCard>
           </Background>

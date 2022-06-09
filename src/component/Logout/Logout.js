@@ -12,4 +12,9 @@ export const Logout = () => {
    logOut()  
    navigate('/')
   }, [])
+
+  return (
+    <>
+    </>
+  )
 }
